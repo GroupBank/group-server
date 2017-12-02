@@ -7,6 +7,7 @@ parse-type==0.4.2
 pluggy==0.6.0
 py==1.5.2
 pycryptodome==3.4.7
+PyHamcrest==1.9.0
 pytest==3.3.0
 pytest-django==3.1.2
 pytz==2017.3
