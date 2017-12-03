@@ -3,10 +3,12 @@
 from functools import wraps
 
 from django.http import HttpResponseBadRequest, HttpResponseForbidden
+from django.views.decorators.http import require_POST
 
 import common.crypto.ec_secp256k1 as crypto
 
 
+@require_POST
 def post_parameters(view):
     """
     Decorator for all views.
