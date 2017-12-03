@@ -29,11 +29,7 @@ class TestPostParameters:
     def test_RequestWithAllParameters_CallsTheViewWithNoErrors(self, parameters):
         view = MagicMock()
         request = MagicMock()
-        request.POST = {
-            'author': '#1',
-            'payload': '{"params": "value"}',
-            'signature': 'asjkdasjkd',
-        }
+        request.POST = parameters
 
         # Inject the view into the decorator and call the wrapper
         post_parameters(view)(request)
